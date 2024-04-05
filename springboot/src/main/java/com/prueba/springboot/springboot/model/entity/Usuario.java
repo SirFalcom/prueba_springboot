@@ -15,25 +15,24 @@ import lombok.Data;
 @Table(name = "usuarios")
 public class Usuario {
 
-  @Id
-  @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private Integer idUsuario;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer idUsuario;
 
-  private String nombres;
+    private String nombres;
 
-  private String apellidos;
+    private String apellidos;
 
-  private String identificacion;
+    private String identificacion;
 
-  @Column(unique = true)
-  private String correo;
+    @Column(unique = true)
+    private String correo; // Renamed from 'correo'
 
-  private String contrasena;
+    private String contrasena;
 
-  @ManyToOne
-  @JoinColumn(name = "rol_idRol")
-  
-  private Rol rol;
+    @ManyToOne
+    @JoinColumn(name = "rol_idRol")
+    private Rol rol;
+
 
 }
-

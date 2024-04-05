@@ -8,10 +8,12 @@ import com.prueba.springboot.springboot.model.entity.Usuario;
 
 public interface UsuarioRepository extends JpaRepository<Usuario, Integer> {
 
-    // Métodos específicos para la entidad Usuario
     Usuario findByCorreo(String correo);
   
     List<Usuario> findByRol_idRol(Integer idRol);
-  
-  }
+
+    boolean existsByCorreoElectronico(String correo);
+
+    boolean existsByNombreUsuario(String nombreUsuario);
+}
   
