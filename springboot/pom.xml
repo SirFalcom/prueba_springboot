@@ -48,6 +48,11 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+	<dependency>
+  		<groupId>com.microsoft.sqlserver</groupId>
+  		<artifactId>sqljdbc</artifactId>
+  		<version>12.0</version>
+	</dependency>
 
 	<build>
 		<plugins>
